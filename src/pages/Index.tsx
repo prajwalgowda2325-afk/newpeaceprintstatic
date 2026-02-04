@@ -7,6 +7,7 @@ import QuotationSection from "@/components/QuotationSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import FloatingButtons from "@/components/FloatingButtons";
+import AboutSection from "@/components/AboutSection";
 
 const Index = () => {
   return (
@@ -17,6 +18,7 @@ const Index = () => {
       <GallerySection />
       <TestimonialsSection />
       <ContactSection />
+      <AboutSection />
       <Footer />
       <FloatingButtons />
     </div>

@@ -36,11 +36,9 @@ const GallerySection = () => {
   const openImage = (index) => setCurrentIndex(index);
   const closeImage = () => setCurrentIndex(null);
 
-  const nextImage = () =>
-    setCurrentIndex((prev) => (prev + 1) % total);
+  const nextImage = () => setCurrentIndex((prev) => (prev + 1) % total);
 
-  const prevImage = () =>
-    setCurrentIndex((prev) => (prev - 1 + total) % total);
+  const prevImage = () => setCurrentIndex((prev) => (prev - 1 + total) % total);
 
   /* ---------- Keyboard ---------- */
   useEffect(() => {
@@ -80,7 +78,6 @@ const GallerySection = () => {
   return (
     <section id="gallery" className="section-padding bg-background">
       <div className="container mx-auto px-4 sm:px-6">
-
         {/* Header */}
         <div className="text-center mb-10">
           <span className="text-primary font-semibold uppercase tracking-widest text-sm">
