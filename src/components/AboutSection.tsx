@@ -48,9 +48,9 @@ const AboutSection = () => {
 
         {/* RIGHT CONTENT */}
         <div className="relative animate-fade-in-up delay-200">
-          <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+          <div className="relative rounded-sm overflow-hidden shadow-sm">
             <img
-              src="/about-peace-prints.jpg"
+              src="/favicon.png"
               alt="Peace Print's Custom Apparel"
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
             />
