@@ -27,6 +27,7 @@ interface ServiceDetail {
   bulkNote?: string;
   shippingNote: string;
   customPricing?: boolean;
+   samples?: string[]; 
 }
 
 const services: ServiceDetail[] = [
@@ -38,7 +39,7 @@ const services: ServiceDetail[] = [
     priceNote: "onwards",
     gsmOptions: [
       {
-        gsm: "220 GSM (Standard)",
+        gsm: "220 GSM (Premium)",
         tiers: [
           { quantity: "1-10 pcs", price: "₹499/pc" },
           { quantity: "11-50 pcs", price: "₹449/pc" },
@@ -65,7 +66,7 @@ const services: ServiceDetail[] = [
       //   ],
       // },
     ],
-    bulkNote: "Orders above 500 pcs: Special wholesale rates available",
+    bulkNote: "Orders above 250 pcs: Special wholesale rates available",
     shippingNote: "Free shipping on orders above ₹2,000 | Flat ₹99 for smaller orders",
   },
   {
@@ -103,7 +104,7 @@ const services: ServiceDetail[] = [
       //   ],
       // },
     ],
-    bulkNote: "Orders above 500 pcs: Special wholesale rates available",
+    bulkNote: "Orders above 250 pcs: Special wholesale rates available",
     shippingNote: "Free shipping on orders above ₹2,500 | Flat ₹99 for smaller orders",
   },
   {
@@ -270,7 +271,7 @@ const ServicesSection = () => {
                 <span className="text-lg sm:text-2xl font-bold text-primary">{service.basePrice}</span>
                 <span className="text-xs sm:text-sm text-muted-foreground ml-1">{service.priceNote}</span>
               </div>
-              <p className="text-xs text-primary mt-2 opacity-0 group-hover:opacity-100 transition-opacity hidden sm:block">
+              <p className="text-xs text-primary mt-2  group-hover:opacity-100 transition-opacity ">
                 Tap for details →
               </p>
             </div>
@@ -356,6 +357,7 @@ const ServicesSection = () => {
                     🚚 <span className="font-medium text-foreground">Shipping:</span> {selectedService.shippingNote}
                   </p>
                 </div>
+                
               </div>
             </>
           )}

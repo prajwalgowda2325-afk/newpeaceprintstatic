@@ -1,10 +1,23 @@
-import { Instagram, Facebook, MessageCircle } from "lucide-react";
+import { FaInstagram, FaFacebookF, FaWhatsapp } from "react-icons/fa";
 
 const socialLinks = [
-  { name: "Instagram", icon: Instagram, href: "https://www.instagram.com/thepeaceprints" },
-  { name: "Facebook", icon: Facebook, href: "https://www.facebook.com/thepeaceprints/" },
-  { name: "WhatsApp", icon: MessageCircle, href: "https://wa.me/+917892866463" },
+  {
+    name: "Instagram",
+    icon: FaInstagram,
+    href: "https://www.instagram.com/thepeaceprints",
+  },
+  {
+    name: "Facebook",
+    icon: FaFacebookF,
+    href: "https://www.facebook.com/thepeaceprints/",
+  },
+  {
+    name: "WhatsApp",
+    icon: FaWhatsapp,
+    href: "https://wa.me/917892866463",
+  },
 ];
+
 
 const Footer = () => {
   return (

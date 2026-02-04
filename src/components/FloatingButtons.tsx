@@ -1,5 +1,6 @@
-import { ArrowUp, MessageCircle } from "lucide-react";
+import { ArrowUp,  } from "lucide-react";
 import { useEffect, useState } from "react";
+import { FaWhatsapp } from "react-icons/fa";
 
 const FloatingButtons = () => {
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -37,7 +38,7 @@ const FloatingButtons = () => {
         className="p-3 sm:p-4 rounded-full bg-[#25D366] text-white shadow-lg hover:scale-110 hover:shadow-xl transition-all duration-300"
         aria-label="Chat on WhatsApp"
       >
-        <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6" />
+        <FaWhatsapp className="w-5 h-5 sm:w-6 sm:h-6" />
       </a>
     </div>
   );
