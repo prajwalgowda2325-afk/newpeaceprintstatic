@@ -4,10 +4,10 @@ import gallery1 from "@/assets/acharya.webp";
 import gallery2 from "@/assets/bahubali.webp";
 import gallery3 from "@/assets/karnataka.webp";
 import gallery4 from "@/assets/voc.webp";
-import gallery5 from "@/assets/gallery-5.jpg";
-import gallery6 from "@/assets/gallery-6.jpg";
-import gallery7 from "@/assets/voc.webp";
-import gallery8 from "@/assets/voc.webp";
+import gallery5 from "@/assets/himalayan.webp";
+import gallery6 from "@/assets/blingevents.webp";
+import gallery7 from "@/assets/zingry.webp";
+import gallery8 from "@/assets/laundry.webp";
 
 const galleryImages = [
   { src: gallery1, alt: "Custom t-shirt print" },
