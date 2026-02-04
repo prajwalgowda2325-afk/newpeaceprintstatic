@@ -151,6 +151,11 @@ export default {
           },
         },
 
+        marquee: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+
       },
 
       animation: {
@@ -165,6 +170,7 @@ export default {
         "fade-up-delay-1": "fadeUp 0.8s ease-out 0.2s forwards",
         "fade-up-delay-2": "fadeUp 0.8s ease-out 0.4s forwards",
         "fade-up-delay-3": "fadeUp 0.8s ease-out 0.6s forwards",
+         marquee: 'marquee 18s linear infinite',
       },
     },
 
