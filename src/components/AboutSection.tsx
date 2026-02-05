@@ -8,6 +8,10 @@ const AboutSection = () => {
     "/clients/blingsevents.png",
     "/clients/kidzee.png",
     "/clients/peacekannadiga.png",
+    "/clients/sunmobility.png",
+    "/clients/appartment.png",
+    "/clients/pspk.png",
+    "/clients/peacekichen.png",
   ];
 
   return (

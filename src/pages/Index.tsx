@@ -8,6 +8,7 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import FloatingButtons from "@/components/FloatingButtons";
 import AboutSection from "@/components/AboutSection";
+import NewlyAddedSection from "@/components/NewlyAddedSection";
 
 const Index = () => {
   return (
@@ -15,6 +16,7 @@ const Index = () => {
       <Navbar />
       <HeroSection />
       <ServicesSection />
+      <NewlyAddedSection />
       <GallerySection />
       <TestimonialsSection />
       <ContactSection />
