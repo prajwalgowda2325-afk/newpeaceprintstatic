@@ -1,17 +1,20 @@
 const AboutSection = () => {
   const clients = [
-    "/clients/acharya.png",
-    "/clients/voc.png",
-    "/clients/zingry.png",
-    "/clients/loundrychamp.png",
-    "/clients/mercedesbenztruck.png",
-    "/clients/blingsevents.png",
-    "/clients/kidzee.png",
-    "/clients/peacekannadiga.png",
-    "/clients/sunmobility.png",
-    "/clients/appartment.png",
-    "/clients/pspk.png",
-    "/clients/peacekichen.png",
+    { src: "/clients/acharya.png", name: "Acharya Institute" },
+    { src: "/clients/voc.png", name: "VOC" },
+    { src: "/clients/zingry.png", name: "Zingry" },
+    { src: "/clients/loundrychamp.png", name: "Laundry Champ" },
+    { src: "/clients/mercedesbenztruck.png", name: "Mercedes Benz Truck" },
+    { src: "/clients/blingsevents.png", name: "Bling Events" },
+    { src: "/clients/kidzee.png", name: "Kidzee" },
+    { src: "/clients/peacekannadiga.png", name: "Peace Kannadiga" },
+    { src: "/clients/sunmobility.png", name: "Sun Mobility" },
+    { src: "/clients/appartment.png", name: "Apartment" },
+    { src: "/clients/pspk.png", name: "PSPK" },
+    { src: "/clients/peacekichen.png", name: "Peace Kitchen" },
+    { src: "/clients/meddy.png", name: "Meddy" },
+    { src: "/clients/cafe.png", name: "Cafe" },
+     { src: "/clients/sonali.png", name: "Sonali" },
   ];
 
   return (
@@ -89,18 +92,44 @@ const AboutSection = () => {
           Trusted by <span className="text-primary">Our Clients</span>
         </h3>
 
-        <div className="relative overflow-hidden group">
-          <div className="flex w-max animate-marquee lg:animate-marquee-lg gap-10">
-            {[...clients, ...clients].map((logo, index) => (
+        <div className="relative overflow-hidden">
+          <div
+            className="
+      flex w-max gap-10
+      animate-marquee lg:animate-marquee-lg
+      hover:[animation-play-state:paused]
+    "
+          >
+            {[...clients, ...clients].map((client, index) => (
               <div
                 key={index}
-                className="flex items-center justify-center min-w-[120px] h-[60px] rounded-xl bg-card border border-border shadow-sm hover:shadow-md transition"
+                className="
+          group relative flex flex-col items-center justify-center
+          min-w-[140px] h-[80px]
+          rounded-xl bg-card border border-border
+          shadow-sm hover:shadow-md transition
+        "
               >
                 <img
-                  src={logo}
-                  alt="Client Logo"
-                  className="max-h-10 object-contain  transition duration-300"
+                  src={client.src}
+                  alt={client.name}
+                  className="
+            max-h-14 max-w-[140px]
+            object-contain transition duration-300
+            group-hover:opacity-30
+          "
                 />
+
+                {/* ✅ Name shows ONLY for hovered logo */}
+                <span
+                  className="
+            absolute text-xs font-medium text-foreground
+            opacity-0 group-hover:opacity-100
+            transition
+          "
+                >
+                  {client.name}
+                </span>
               </div>
             ))}
           </div>
