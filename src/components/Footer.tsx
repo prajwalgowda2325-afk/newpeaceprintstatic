@@ -5,7 +5,9 @@ import {
   FaWhatsapp,
   FaTimes,
   FaChevronDown,
+  FaGoogle,
 } from "react-icons/fa";
+
 
 /* ---------------- SOCIAL LINKS ---------------- */
 const socialLinks = [
@@ -20,6 +22,11 @@ const socialLinks = [
     href: "https://www.facebook.com/thepeaceprints/",
   },
   { name: "WhatsApp", icon: FaWhatsapp, href: "https://wa.me/917892866463" },
+   {
+    name: "Google Business",
+    icon: FaGoogle,
+    href: "https://share.google/5LuoQMrXtQm0kGDBU", // 🔴 replace with your actual link
+  },
 ];
 
 /* ---------------- MODAL ---------------- */
