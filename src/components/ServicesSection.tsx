@@ -27,19 +27,20 @@ interface ServiceDetail {
   bulkNote?: string;
   shippingNote: string;
   customPricing?: boolean;
-   samples?: string[]; 
+  samples?: string[];
 }
 
 const services: ServiceDetail[] = [
   {
     icon: Shirt,
     title: "Customized T-Shirts",
-    description: "Premium cotton tees with your designs",
+    description:
+      "Premium tees with your designs, perfect for branding, events, teams, and everyday wear.",
     basePrice: "₹349",
     priceNote: "onwards",
     gsmOptions: [
       {
-        gsm: "220 GSM (Premium)",
+        gsm: "REGULAR  T-Shirts (Premium) 180GSM TO 220GSM",
         tiers: [
           { quantity: "1-10 pcs", price: "₹499/pc" },
           { quantity: "11-50 pcs", price: "₹449/pc" },
@@ -56,18 +57,19 @@ const services: ServiceDetail[] = [
       //     { quantity: "100+ pcs", price: "₹259/pc" },
       //   ],
       // },
-      // {
-      //   gsm: "220 GSM (Heavy)",
-      //   tiers: [
-      //     { quantity: "1-10 pcs", price: "₹399/pc" },
-      //     { quantity: "11-50 pcs", price: "₹369/pc" },
-      //     { quantity: "51-100 pcs", price: "₹339/pc" },
-      //     { quantity: "100+ pcs", price: "₹309/pc" },
-      //   ],
-      // },
+      {
+        gsm: "Collar Polo T-Shirts (Premium) 220GSM",
+        tiers: [
+          { quantity: "1-10 pcs", price: "₹599/pc" },
+          { quantity: "11-20 pcs", price: "₹459/pc" },
+          { quantity: "21-30 pcs", price: "₹399/pc" },
+          { quantity: "30+ pcs", price: "₹359/pc" },
+        ],
+      },
     ],
     bulkNote: "Orders above 250 pcs: Special wholesale rates available",
-    shippingNote: "Free shipping on orders above ₹2,000 | Flat ₹99 for smaller orders",
+    shippingNote:
+      "Free shipping on orders above ₹2,000 | Flat ₹99 for smaller orders",
   },
   {
     icon: Layers,
@@ -105,7 +107,8 @@ const services: ServiceDetail[] = [
       // },
     ],
     bulkNote: "Orders above 250 pcs: Special wholesale rates available",
-    shippingNote: "Free shipping on orders above ₹2,500 | Flat ₹99 for smaller orders",
+    shippingNote:
+      "Free shipping on orders above ₹2,500 | Flat ₹99 for smaller orders",
   },
   {
     icon: Package,
@@ -143,7 +146,8 @@ const services: ServiceDetail[] = [
       // },
     ],
     bulkNote: "Orders above 200 pcs: Special wholesale rates available",
-    shippingNote: "Free shipping on orders above ₹3,000 | Flat ₹149 for smaller orders",
+    shippingNote:
+      "Free shipping on orders above ₹3,000 | Flat ₹149 for smaller orders",
   },
   {
     icon: Award,
@@ -181,7 +185,8 @@ const services: ServiceDetail[] = [
       },
     ],
     bulkNote: "Orders above 100 pcs: Special wholesale rates available",
-    shippingNote: "Free shipping on orders above ₹5,000 | Flat ₹199 for smaller orders",
+    shippingNote:
+      "Free shipping on orders above ₹5,000 | Flat ₹199 for smaller orders",
   },
   {
     icon: HardHat,
@@ -219,7 +224,8 @@ const services: ServiceDetail[] = [
       },
     ],
     bulkNote: "Orders above 500 pcs: Special wholesale rates available",
-    shippingNote: "Free shipping on orders above ₹1,500 | Flat ₹79 for smaller orders",
+    shippingNote:
+      "Free shipping on orders above ₹1,500 | Flat ₹79 for smaller orders",
   },
   {
     icon: Gift,
@@ -234,7 +240,9 @@ const services: ServiceDetail[] = [
 ];
 
 const ServicesSection = () => {
-  const [selectedService, setSelectedService] = useState<ServiceDetail | null>(null);
+  const [selectedService, setSelectedService] = useState<ServiceDetail | null>(
+    null,
+  );
 
   return (
     <section id="services" className="section-padding bg-secondary">
@@ -247,7 +255,9 @@ const ServicesSection = () => {
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-3 sm:mb-4">
             Our Services
           </h2>
-          <p className="text-sm sm:text-base text-muted-foreground">Click on any product to see detailed pricing</p>
+          <p className="text-sm sm:text-base text-muted-foreground">
+            Click on any product to see detailed pricing
+          </p>
         </div>
 
         {/* Services Grid */}
@@ -268,8 +278,12 @@ const ServicesSection = () => {
                 {service.description}
               </p>
               <div className="pt-2 sm:pt-3 border-t border-border">
-                <span className="text-lg sm:text-2xl font-bold text-primary">{service.basePrice}</span>
-                <span className="text-xs sm:text-sm text-muted-foreground ml-1">{service.priceNote}</span>
+                <span className="text-lg sm:text-2xl font-bold text-primary">
+                  {service.basePrice}
+                </span>
+                <span className="text-xs sm:text-sm text-muted-foreground ml-1">
+                  {service.priceNote}
+                </span>
               </div>
               <p className="text-xs text-primary mt-2  group-hover:opacity-100 transition-opacity ">
                 Tap for details →
@@ -285,7 +299,10 @@ const ServicesSection = () => {
       </div>
 
       {/* Pricing Detail Modal */}
-      <Dialog open={!!selectedService} onOpenChange={() => setSelectedService(null)}>
+      <Dialog
+        open={!!selectedService}
+        onOpenChange={() => setSelectedService(null)}
+      >
         <DialogContent className="max-w-[95vw] sm:max-w-2xl max-h-[85vh] overflow-y-auto bg-card border-border mx-2 sm:mx-auto">
           {selectedService && (
             <>
@@ -300,7 +317,9 @@ const ServicesSection = () => {
 
               <div className="mt-4 space-y-6">
                 {/* Description */}
-                <p className="text-muted-foreground">{selectedService.description}</p>
+                <p className="text-muted-foreground">
+                  {selectedService.description}
+                </p>
 
                 {/* Custom Pricing Message for Corporate */}
                 {selectedService.customPricing ? (
@@ -310,7 +329,8 @@ const ServicesSection = () => {
                         Custom Pricing Based on Requirements
                       </h4>
                       <p className="text-muted-foreground text-sm mb-4">
-                        Corporate gift combos are tailored to your specific needs. Pricing depends on:
+                        Corporate gift combos are tailored to your specific
+                        needs. Pricing depends on:
                       </p>
                       <ul className="text-sm text-muted-foreground space-y-2">
                         <li>• Quantity of items per combo</li>
@@ -319,23 +339,36 @@ const ServicesSection = () => {
                         <li>• Packaging requirements</li>
                       </ul>
                     </div>
-                    <p className="text-sm text-muted-foreground">{selectedService.bulkNote}</p>
+                    <p className="text-sm text-muted-foreground">
+                      {selectedService.bulkNote}
+                    </p>
                   </div>
                 ) : (
                   /* GSM Options & Pricing Tiers */
                   <div className="space-y-3 sm:space-y-4">
-                    <h4 className="font-semibold text-base sm:text-lg text-foreground">Pricing by Quality & Quantity</h4>
+                    <h4 className="font-semibold text-base sm:text-lg text-foreground">
+                      Pricing by Quality & Quantity
+                    </h4>
                     {selectedService.gsmOptions?.map((option, idx) => (
-                      <div key={idx} className="p-3 sm:p-4 rounded-lg sm:rounded-xl bg-background border border-border">
-                        <h5 className="font-medium text-primary mb-2 sm:mb-3 text-sm sm:text-base">{option.gsm}</h5>
+                      <div
+                        key={idx}
+                        className="p-3 sm:p-4 rounded-lg sm:rounded-xl bg-background border border-border"
+                      >
+                        <h5 className="font-medium text-primary mb-2 sm:mb-3 text-sm sm:text-base">
+                          {option.gsm}
+                        </h5>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                           {option.tiers.map((tier, tierIdx) => (
                             <div
                               key={tierIdx}
                               className="flex justify-between items-center p-2 rounded-lg bg-secondary"
                             >
-                              <span className="text-xs sm:text-sm text-muted-foreground">{tier.quantity}</span>
-                              <span className="font-semibold text-sm sm:text-base text-foreground">{tier.price}</span>
+                              <span className="text-xs sm:text-sm text-muted-foreground">
+                                {tier.quantity}
+                              </span>
+                              <span className="font-semibold text-sm sm:text-base text-foreground">
+                                {tier.price}
+                              </span>
                             </div>
                           ))}
                         </div>
@@ -347,17 +380,22 @@ const ServicesSection = () => {
                 {/* Bulk Order Note */}
                 {selectedService.bulkNote && !selectedService.customPricing && (
                   <div className="p-4 rounded-xl bg-primary/10 border border-primary/20">
-                    <p className="text-sm font-medium text-primary">🎁 {selectedService.bulkNote}</p>
+                    <p className="text-sm font-medium text-primary">
+                      🎁 {selectedService.bulkNote}
+                    </p>
                   </div>
                 )}
 
                 {/* Shipping Info */}
                 <div className="p-4 rounded-xl bg-muted/50 border border-border">
                   <p className="text-sm text-muted-foreground">
-                    🚚 <span className="font-medium text-foreground">Shipping:</span> {selectedService.shippingNote}
+                    🚚{" "}
+                    <span className="font-medium text-foreground">
+                      Shipping:
+                    </span>{" "}
+                    {selectedService.shippingNote}
                   </p>
                 </div>
-                
               </div>
             </>
           )}
@@ -366,7 +404,5 @@ const ServicesSection = () => {
     </section>
   );
 };
-
-
 
 export default ServicesSection;
