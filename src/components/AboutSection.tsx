@@ -14,7 +14,10 @@ const AboutSection = () => {
     { src: "/clients/peacekichen.png", name: "Peace Kitchen" },
     { src: "/clients/meddy.png", name: "Meddy" },
     { src: "/clients/cafe.png", name: "Cafe" },
-     { src: "/clients/sonali.png", name: "Sonali" },
+    { src: "/clients/sonali.png", name: "Sonali" },
+    { src: "/clients/maskacorner.png", name: "Maska corner" },
+    { src: "/clients/gowildkarunadu.png", name: "Go Wild Karunadu" },
+     { src: "/clients/SchneiderElectric.png", name: "Schneider Electric" },
   ];
 
   return (
